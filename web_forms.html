@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript">
+            function showResult(){
+                x = document.forms["myform"]["newinput"].value;
+                document.forms["myform"].result.value=x;
+            }
+        </script>
+    </head>
+    <body>
+        <form action = "http://example.com/cgiscript.pl" method="post">
+            <p>
+                <label for="firstname">first name: </label>
+                <input type="text" id="firstname"><br/>
+            
+                <label for="lastname">last name: </label>
+                <input type="text" id="lastname"><br/>
+            
+                <label for="email">email: </label>
+                <input type="text" id="email"><br/>
+            
+                <input type="radio" name="sex" value="male">Male<br/>
+                <input type="radio" name="sex" value="female">Female<br/>
+                <input type="submit" value="send"><input type="reset">
+            </p> 
+            </form>
+            <form action="/cgi-bin/html5.cgi" method="get">
+            Data and Time: <input type="datetime" name="newinput"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="cgi-bin/html5.cgi" method="get">
+            Local Date and Time: <input type="datetime-local" name="newinput"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html4.cgi" method="get">
+            Date: <input type="date" name="newinput"/>
+            <input type="submit" value="submit"/>                
+        </form>f
+        <form afget">
+            Monfnput"/>
+            <inf
+        </form>f
+        <form action="/cg-bin/html5.cgi" method="get">
+            Week: <input type="week" name="newinput"/>
+            <input type="submit" value="submit">
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Time: <input type="time" name="newinput"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Select Number: <input type="number" min=0 max="10" step="1"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Select Range: <input type="range" min="0" max="10" step="1" value="5" name="newinput"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Enter email: <input type="email" name="newinput"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Enter URL: <input type="url" name="newinput"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get" name="myform">
+            Enter a value: <input type="text" name="newinput"/>
+            <input type="button" value="Result" onclick="showResult();"/>
+            <output name="result"></output>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Enter email: <input type="email" name="newinput" placeholder="email@example.com"/>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Enter email: <input type="email" name="text" name="inputname" autofocus/>
+            <p>Try to submit usign Submit button</p>
+            <input type="submit" value="submit"/>
+        </form>
+        <form action="/cgi-bin/html5.cgi" method="get">
+            Enter email: <input type="text" name="newinput" required/>
+            <input type="submit" value="submit"/>
+        </form>
+    </body>
+</html>
