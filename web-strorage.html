@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+            if( sessionStorage.hits ){
+                sessionStorage.hits = Number(sessionStorage.hits) + 1;
+            } else {
+                sessionStorage.hits = 1;
+            }
+            document.write("Hotal Hits: " + sessionStorage.hits);
+        </script>
+        <p>Refresh the page to increase number of hits</p>
+        <p>Close the window and open it again and check the result. </p>
+
+        <script type="text/javascript">
+            if ( localStorage.hits ){
+                localStorage.hits = Number(localStorage.hits) + 1;
+            } else {
+                localStorage.hits = 1;
+            }
+            document.write("Total Hits: " + localStorage.hits);
+        </script>
+        <p> Refresh the page to increase number of hits. </p>
+        <p> Close the window and open it again and check the result. </p>
+
+        <script type="text/javascript">
+            localStorage.clear();
+
+            // Reset number of hits
+            if ( localStorage.hits ){
+                localStorage.hits = Number(localStorage.hits)+1;
+            } else {
+                localStorage.hits = 1;
+            }
+            document.write("Total Hits: " + localStorage.hits);
+        </script>
+        <p> Refreshing the page would not to increase hit counter </p>
+        <p> Close the window and open it again and check the result. </p>
+    </body>
+</html>
