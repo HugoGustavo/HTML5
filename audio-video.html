@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript">
+            function PlayVideo(){
+                var v = document.getElementsByTagName("video")[0];
+                v.play();
+            }
+        </script>
+    </head>
+    <body>
+        <video width="300" height="200" controls autoplay>
+            <source src="/html5/foo.ogg" type="video/ogg"/>
+            <source src="/html5/foo.mp4" type="video/mp4"/>
+            Your browser does not support the <video> element.
+            </video>
+        </video>
+        <audio controls autoplay>
+            <source src="/html5/audio.ogg" type="audio/ogg"/>
+            <source src="/html5/audio.wav" type="audio/wav"/>
+            Your browser does not support the <audio> element
+        </audio>
+        <form>
+            <video width="300" height="200" src="/html5/foo.mp4">
+            Your browser does not support the video element;
+            </video> <br/>
+            <input type="button" onclick="Playvideo();" value="Play"/>
+        </form>
+    </body>
+</html>
