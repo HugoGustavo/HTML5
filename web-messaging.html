@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            var iframe = document.querySelector('iframe');
+            var button = document.querySelector('button');
+            var clickHandler = function(){
+                iframe.contentWindow.postMessage('The message to send.', 'https://www.tutorialspoint.com');
+            }
+            button.addEventListener('click', clickHandler, false);
+
+            var messageEventHandler = function(event){
+                // check that the origin is one we want
+                if ( event.origin == 'https://www.tutorialspoint.com' ){
+                    alert(event.data);
+                }
+            }
+            
+            window.addEventListener('message', messageEventHandler, false);
+
+            var loadHandler = function(){
+                var mc, portMessageHandler;
+                mc = new MessageChannel();
+                window.parent.postMessage('documentAHasLoaded', 'http://foo.example', [mc.port2]);
+                portMessageHandler = function(portMsgEvent){
+                    alert(portMsgEvent.data);
+                }
+                mc.port1.addEventListener('message', portMessageHandler, false);
+                mc.port1.start();
+            }
+
+            window.addEventListener('DOMContentLoaded', loadHandler, false);
+        </script>
+    </head>
+</html>
